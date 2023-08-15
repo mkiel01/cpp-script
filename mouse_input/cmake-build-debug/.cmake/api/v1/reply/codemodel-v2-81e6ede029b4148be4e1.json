@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/michalkielkowski/Desktop/infa-all/scripts/c++ script penzu etc/keybord/mouse_input/cmake-build-debug",
-		"source" : "/Users/michalkielkowski/Desktop/infa-all/scripts/c++ script penzu etc/keybord/mouse_input"
+		"build" : "/Users/michalkielkowski/Desktop/infa-all/scripts/c++-script-dairy/mouse_input/cmake-build-debug",
+		"source" : "/Users/michalkielkowski/Desktop/infa-all/scripts/c++-script-dairy/mouse_input"
 	},
 	"version" : 
 	{

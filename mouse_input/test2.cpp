@@ -1,16 +1,27 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
+#include <CoreGraphics/CoreGraphics.h>
+#include <ApplicationServices/ApplicationServices.h>
+
+using namespace std;
+
 
 int main() {
+
+    int centerX;
+    int centerY;
+    system("open https://penzu.com/app/login?after_login=%2Fjournals");
+    usleep(5000000); // Sleep for 1 second (adjust as needed)
+    system("screencapture input1.png");
     // Read the input image
-    cv::Mat inputImage = cv::imread("/Users/michalkielkowski/Desktop/infa-all/scripts/c++ script penzu etc/keybord/mouse_input/input_image.png", cv::IMREAD_COLOR);
+    cv::Mat inputImage = cv::imread("/Users/michalkielkowski/Desktop/infa-all/scripts/c++-script-dairy/mouse_input/cmake-build-debug/input1.png", cv::IMREAD_COLOR);
     if (inputImage.empty()) {
         std::cout << "Could not read the image." << std::endl;
         return -1;
     }
 
     // Read the template image (Facebook icon)
-    cv::Mat templateImage = cv::imread("/Users/michalkielkowski/Desktop/infa-all/scripts/c++ script penzu etc/keybord/mouse_input/facebook_icon.png", cv::IMREAD_COLOR);
+    cv::Mat templateImage = cv::imread("/Users/michalkielkowski/Desktop/infa-all/scripts/c++-script-dairy/mouse_input/find1.png", cv::IMREAD_COLOR);
     if (templateImage.empty()) {
         std::cout << "Could not read the template image." << std::endl;
         return -1;
@@ -33,11 +44,63 @@ int main() {
     for (const cv::Point& point : locations) {
         cv::Rect rect(point.x, point.y, templateImage.cols, templateImage.rows);
         cv::rectangle(inputImage, rect, cv::Scalar(0, 0, 255), 2); // Red color (BGR order)
+
+        centerX = point.x + templateImage.cols / 2;
+        centerY = point.y + templateImage.rows / 2;
+
+
     }
 
+    CGPoint cursorPosition = CGPointMake(centerX, centerY);
+    CGEventRef moveEvent = CGEventCreateMouseEvent(
+            NULL, kCGEventMouseMoved,
+            cursorPosition, kCGMouseButtonLeft
+    );
+    CGEventPost(kCGHIDEventTap, moveEvent);
+    CFRelease(moveEvent);
+
+    cout << "mouse moved" << endl;
+    // Rest for a moment to allow cursor movement to be visible
+    usleep(1000000); // Sleep for 1 second (adjust as needed)
+
     // Display the result
+
+    // Display the result in full screen using native macOS APIs
+    cv::resizeWindow("Result", 1920, 1080);  // Resize the window to full screen resolution
+    cv::moveWindow("Result", 0, 0);          // Move the window to the top-left corner
     cv::imshow("Result", inputImage);
-    cv::waitKey(0);
+
+
+    usleep(3000000); // Sleep for 5 second (adjust as needed)
+
+    // Loop through the detected locations
+//    for (const cv::Point& point : locations) {
+        // Calculate the center of the matched region
+//        int centerX = point.x + templateImage.cols / 2;
+//        int centerY = point.y + templateImage.rows / 2;
+
+        // Move the mouse cursor to the center of the matched region using CoreGraphics
+//        CGPoint cursorPosition = CGPointMake(centerX, centerY);
+//        CGEventRef moveEvent = CGEventCreateMouseEvent(
+//                NULL, kCGEventMouseMoved,
+//                cursorPosition, kCGMouseButtonLeft
+//        );
+//        CGEventPost(kCGHIDEventTap, moveEvent);
+//        CFRelease(moveEvent);
+//
+//        cout << "mouse moved";
+//        // Rest for a moment to allow cursor movement to be visible
+//        usleep(1000000); // Sleep for 1 second (adjust as needed)
+
+//    }
+
+    // Remove the input1 image file from the system
+    if (remove("/Users/michalkielkowski/Desktop/infa-all/scripts/c++-script-dairy/mouse_input/cmake-build-debug/input1.png") != 0) {
+        cout << "Error deleting input1.png" << endl;
+    } else {
+        cout << "input1.png successfully removed" << endl;
+    }
+
 
     return 0;
 }

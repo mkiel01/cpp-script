@@ -1,4 +1,4 @@
-# Install script for directory: /Users/michalkielkowski/Desktop/infa-all/scripts/c++ script penzu etc/keybord/mouse_input
+# Install script for directory: /Users/michalkielkowski/Desktop/infa-all/scripts/c++-script-dairy/mouse_input
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/michalkielkowski/Desktop/infa-all/scripts/c++ script penzu etc/keybord/mouse_input/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/michalkielkowski/Desktop/infa-all/scripts/c++-script-dairy/mouse_input/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

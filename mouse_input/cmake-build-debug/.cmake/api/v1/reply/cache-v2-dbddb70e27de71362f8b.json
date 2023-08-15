@@ -67,7 +67,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/michalkielkowski/Desktop/infa-all/scripts/c++ script penzu etc/keybord/mouse_input/cmake-build-debug"
+			"value" : "/Users/michalkielkowski/Desktop/infa-all/scripts/c++-script-dairy/mouse_input/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -491,7 +491,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/michalkielkowski/Desktop/infa-all/scripts/c++ script penzu etc/keybord/mouse_input/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/Users/michalkielkowski/Desktop/infa-all/scripts/c++-script-dairy/mouse_input/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -551,7 +551,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/michalkielkowski/Desktop/infa-all/scripts/c++ script penzu etc/keybord/mouse_input"
+			"value" : "/Users/michalkielkowski/Desktop/infa-all/scripts/c++-script-dairy/mouse_input"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -1159,7 +1159,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/michalkielkowski/Desktop/infa-all/scripts/c++ script penzu etc/keybord/mouse_input/cmake-build-debug"
+			"value" : "/Users/michalkielkowski/Desktop/infa-all/scripts/c++-script-dairy/mouse_input/cmake-build-debug"
 		},
 		{
 			"name" : "mouse_input_IS_TOP_LEVEL",
@@ -1183,7 +1183,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/michalkielkowski/Desktop/infa-all/scripts/c++ script penzu etc/keybord/mouse_input"
+			"value" : "/Users/michalkielkowski/Desktop/infa-all/scripts/c++-script-dairy/mouse_input"
 		}
 	],
 	"kind" : "cache",
