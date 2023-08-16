@@ -2,7 +2,8 @@
 #include <iostream>
 #include <CoreGraphics/CoreGraphics.h>
 #include <ApplicationServices/ApplicationServices.h>
-
+#include <thread>
+#include <chrono>
 using namespace std;
 
 
@@ -100,7 +101,21 @@ int main() {
     } else {
         cout << "input1.png successfully removed" << endl;
     }
+// Perform a mouse click
 
+    CGEventRef clickEvent = CGEventCreateMouseEvent(nullptr, kCGEventLeftMouseDown,
+                                                    cursorPosition, kCGMouseButtonLeft);
+    CGEventPost(kCGHIDEventTap, clickEvent);
+    std::chrono::seconds delayDuration(1);
+    this_thread::sleep_for(delayDuration);
+    CFRelease(clickEvent);
+
+    clickEvent = CGEventCreateMouseEvent(nullptr, kCGEventLeftMouseUp,
+                                         cursorPosition, kCGMouseButtonLeft);
+    CGEventPost(kCGHIDEventTap, clickEvent);
+    std::chrono::seconds delayDuration2(1);
+    this_thread::sleep_for(delayDuration);
+    CFRelease(clickEvent);
 
     return 0;
 }

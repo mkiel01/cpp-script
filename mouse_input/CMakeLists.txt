@@ -13,7 +13,7 @@ find_library(CoreFoundation CoreFoundation)
 
 
 
-add_executable(mouse_input test2.cpp)
+add_executable(mouse_input main.cpp mouse.cpp mouse.h keyboard.cpp keyboard.h system_operations.cpp system_operations.h image_recognition.cpp image_recognition.h program.cpp program.h)
 
 # Include OpenCV headers
 include_directories(${OpenCV_INCLUDE_DIRS})
