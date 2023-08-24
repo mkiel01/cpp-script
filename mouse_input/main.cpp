@@ -7,25 +7,8 @@ using namespace std;
 #include "keyboard.h"
 #include <chrono>
 #include <thread>
-
-void typeMessage(const std::string& message, int delayMillis) {
-    for (char c : message) {
-        CGEventRef keyEventDown = CGEventCreateKeyboardEvent(NULL, 0, true);
-        UniChar oneChar = c;
-        CGEventKeyboardSetUnicodeString(keyEventDown, 1, &oneChar);
-        CGEventPost(kCGHIDEventTap, keyEventDown);
-        CFRelease(keyEventDown);
-
-        std::this_thread::sleep_for(std::chrono::milliseconds(delayMillis));
-
-        CGEventRef keyEventUp = CGEventCreateKeyboardEvent(NULL, 0, false);
-        CGEventKeyboardSetUnicodeString(keyEventUp, 1, &oneChar);
-        CGEventPost(kCGHIDEventTap, keyEventUp);
-        CFRelease(keyEventUp);
-
-        std::this_thread::sleep_for(std::chrono::milliseconds(delayMillis));
-    }
-}
+#include <ctime>
+#include <iomanip>
 
 int main() {
 
@@ -44,7 +27,19 @@ int main() {
     usleep(1000000); // Sleep for 1 second (adjust as needed)
     penzu.left_mouse_click();
     usleep(5000000); // Sleep for 1 second (adjust as needed)
-    typeMessage("hello world", 100);
+    time_t currentTime = time(nullptr);
+    tm *localTime = localtime(&currentTime);
+    int day = localTime->tm_mday;
+    int month = localTime->tm_mon + 1;
+    string formattedDate = to_string(day) + "." + (month < 10 ? "0" : "") + to_string(month);
+    penzu.write_input(formattedDate, 100);
+    usleep(1000000); // Sleep for 1 second (adjust as needed)
+    penzu.move_mouse_to_specific_point(815, 200);
+    usleep(1000000); // Sleep for 1 second (adjust as needed)
+    penzu.left_mouse_click();
+    usleep(1000000); // Sleep for 1 second (adjust as needed)
+    penzu.write_input("How was your day:\nWhat did you learn today:\nHow was the day in a scale 1-10:", 100);
+
 
 
 

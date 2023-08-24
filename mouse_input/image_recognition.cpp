@@ -17,11 +17,13 @@ void image_recognition::temple_matching(string image_to_match, string screenshot
     cv::Mat inputImage = cv::imread(screenshot_of_whole, cv::IMREAD_COLOR);
     if (inputImage.empty()) {
         cout << "Could not read the image." << std::endl;
+        exit(1);
     }
     // Read the template image
     cv::Mat templateImage = cv::imread(image_to_match , cv::IMREAD_COLOR);
     if (templateImage.empty()) {
         cout << "Could not read the template image." << std::endl;
+        exit(1);
     }
 
     // Perform template matching

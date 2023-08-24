@@ -16,6 +16,7 @@ public:
     int y_cord;
     mouse(int, int);
     void move_mouse();
+    void move_mouse_to_specific_point(int x, int y);
     void left_mouse_click();
 
     // variable handling

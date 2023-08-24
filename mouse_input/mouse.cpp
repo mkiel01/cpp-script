@@ -23,6 +23,21 @@ void mouse::move_mouse() {
 
 }
 
+
+void mouse::move_mouse_to_specific_point(int x, int y) {
+    CGPoint cursorPosition = CGPointMake(x, y);
+    CGEventRef moveEvent = CGEventCreateMouseEvent(
+            NULL, kCGEventMouseMoved,
+            cursorPosition, kCGMouseButtonLeft
+    );
+    // connected whit NULL above
+    if (moveEvent) {
+        CGEventPost(kCGHIDEventTap, moveEvent);
+        CFRelease(moveEvent);
+    }
+
+}
+
 void mouse::left_mouse_click() {
     CGPoint cursorPosition = CGPointMake(x_cord, y_cord);
 
