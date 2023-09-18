@@ -1135,7 +1135,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/local/Cellar/opencv/4.8.0_1][v4.8.0()]"
+			"value" : "[/usr/local/Cellar/opencv/4.8.0_4][v4.8.0()]"
 		},
 		{
 			"name" : "OpenCV_DIR",

@@ -1,0 +1,8 @@
+# ninja log v5
+54	3062	1693944879953795193	CMakeFiles/mouse_input.dir/keyboard.cpp.o	b4d2205ebba9c53b
+45	2507	1693946770879459066	CMakeFiles/mouse_input.dir/image_recognition.cpp.o	edf8a18ed6553266
+1	195	1695068635603437172	build.ninja	fa7e3cbc3f18c884
+52	2990	1693944879876494181	CMakeFiles/mouse_input.dir/mouse.cpp.o	5abd4658b18f184a
+56	4494	1693944881385102728	CMakeFiles/mouse_input.dir/program.cpp.o	d67b341988d55c88
+3081	3333	1693947469694464203	mouse_input	3c815bd8a0a64600
+27	3080	1693947469432453523	CMakeFiles/mouse_input.dir/main.cpp.o	d9526a085a7328e3

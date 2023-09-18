@@ -13,7 +13,7 @@ int main() {
 
     system("open https://penzu.com/app/login?after_login=%2Fjournals");
     usleep(5000000); // Sleep for 5 second (adjust as needed)
-    system("screencapture input1.png");
+    system("screencapture /Users/michalkielkowski/Desktop/infa-all/scripts/c++-web-scripting/examples/penzu_dairy_autonomation/cmake-build-debug/input1.png");
 
     program penzu(0, 0);
 

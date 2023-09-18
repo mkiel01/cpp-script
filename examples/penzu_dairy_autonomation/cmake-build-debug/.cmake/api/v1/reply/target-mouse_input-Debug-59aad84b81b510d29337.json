@@ -60,7 +60,7 @@
 				{
 					"backtrace" : 3,
 					"isSystem" : true,
-					"path" : "/usr/local/Cellar/opencv/4.8.0_1/include/opencv4"
+					"path" : "/usr/local/Cellar/opencv/4.8.0_4/include/opencv4"
 				}
 			],
 			"language" : "CXX",
