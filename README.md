@@ -18,7 +18,7 @@ The project consists of
 - Thread 
 
 ## Getting started 
-This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple example steps.
 
 ### Installation
 _Below is an example of how you can install and set up your app._
