@@ -30,6 +30,6 @@ _Below is an example of how you can install and set up your app._
     ```
    
 ## Usage
-Based on the [![example's](https://img.shields.io/badge/Example-Click%20Here-blue.svg)](https://raw.githubusercontent.com/mkiel01/cpp-script-website/tree/main/examples) folder. 
+Based on the [![example's](https://img.shields.io/badge/Example-Click%20Here-blue.svg)](https://github.com/mkiel01/cpp-script-website/tree/main/examples) folder. 
 You can personalize it for your own implementation.
 
